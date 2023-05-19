@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.BedDao;
-
 import model.Bed;
 
 @WebServlet("/addbed")
@@ -28,7 +27,7 @@ public class AddBed extends HttpServlet {
 		String price=request.getParameter("price");
 		String status=request.getParameter("status");
 		
-		
+			
 		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
 		
 		
@@ -42,8 +41,8 @@ public class AddBed extends HttpServlet {
 					dispatcher.include(request, response);
 				    
 					}
-			} catch (ClassNotFoundException | SQLException e) {
-				// TODO Auto-generated catch block
+			} catch (Exception e) {
+			 
 				e.printStackTrace();
 			}	}
 

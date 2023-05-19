@@ -43,7 +43,7 @@ RequestDispatcher dispatcher=request.getRequestDispatcher("admin.html");
 				dispatcher.include(request, response);
 			    
 				}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

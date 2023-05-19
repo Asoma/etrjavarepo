@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import controller.Doctordao;
-
 import model.Doctor;
 
 /**
@@ -45,7 +44,7 @@ public class UpdateDoctor extends HttpServlet {
 				dispatcher.include(request, response);
 			    
 				}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

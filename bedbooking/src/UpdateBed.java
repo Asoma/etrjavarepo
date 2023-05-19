@@ -43,7 +43,7 @@ public class UpdateBed extends HttpServlet {
 				response.sendRedirect("user.jsp");
 			    
 				}
-		} catch (ClassNotFoundException | SQLException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}

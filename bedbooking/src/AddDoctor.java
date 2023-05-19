@@ -42,7 +42,7 @@ public class AddDoctor extends HttpServlet {
 					dispatcher.include(request, response);
 				    
 					}
-			} catch (ClassNotFoundException | SQLException e) {
+			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
