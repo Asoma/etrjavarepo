@@ -29,7 +29,7 @@ public class DeleteBed extends HttpServlet {
 				dispatcher.include(request, response);
 			    
 				}
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
