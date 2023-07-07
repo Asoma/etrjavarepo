@@ -263,7 +263,7 @@ to {
         	  
             out.print("<h1>Hello Dr " + uname + ",  Welcome</h1>");
          } else {
-            response.sendRedirect("login.html");
+            response.sendRedirect("index.html");
          }
       }
    %>

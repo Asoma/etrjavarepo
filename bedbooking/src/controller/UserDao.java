@@ -108,6 +108,38 @@ public class UserDao {
 		return u4 ;
 	}
 	
+	 
+public static User getUserInfo(String u_name) throws ClassNotFoundException, SQLException
+{
+
+	Connection con=UserDao.getConnection();
+	System.out.println("Conection Established Successfully");
+	User u4=new User();
+	PreparedStatement ps=con.prepareStatement("SELECT * FROM reg_patient WHERE username=?");
+	ps.setString(1,u_name);
+	
+	ResultSet rs=ps.executeQuery();
+	
+	
+    while(rs.next())
+	{
+   
+    	u4.setU_name(rs.getString(2));
+    	u4.setU_age(rs.getString(3));
+    	u4.setU_mob(rs.getString(4));
+    	u4.setU_add(rs.getString(5));
+    	u4.setU_gender(rs.getString(6));
+    	u4.setU_bgroup(rs.getString(7));
+    	u4.setU_sym(rs.getString(8));
+    	u4.setU_dprt(rs.getString(9));
+    	u4.setU_doa(rs.getString(10));
+   }
+    
+    System.out.println("name "+u4.getU_name());
+    con.close();
+	return u4 ;
+}
+	
 	public static int updateUser(User u1) throws ClassNotFoundException, SQLException
 	{
 	

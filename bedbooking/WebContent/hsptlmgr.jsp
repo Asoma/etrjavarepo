@@ -399,7 +399,9 @@ img.avatar {
         <label for="price"><b>Price Of Bed</b></label>
         <input type="text" placeholder="price" name="price" required>
         <label for="status"><b>Status</b></label>
-        <input type="text" placeholder="status" name="status" required>
+        <input type="text" placeholder="status" name="status" value="available" required>
+        
+             
           
         <button type="submit" value="Submit">Submit</button>
         

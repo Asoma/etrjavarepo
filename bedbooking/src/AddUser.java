@@ -33,7 +33,7 @@ public class AddUser extends HttpServlet {
 		String u_bgroup=request.getParameter("h1bgroup");
 		String u_uname=request.getParameter("h1name");
 		String u_pass=request.getParameter("h1pass");
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		
 		
 			User u=new User( u_name,u_age,u_mob,  u_add, u_gender,u_bgroup,u_uname,u_pass);

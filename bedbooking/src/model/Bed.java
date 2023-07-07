@@ -2,7 +2,12 @@ package model;
 
 public class Bed {
 
-	String room_type,room_no,bed_no,price,status;
+	private String b_id;
+	String room_type;
+	String room_no;
+	String bed_no;
+	String price;
+	String status;
 
 	public Bed() {
 		super();
@@ -84,6 +89,14 @@ public class Bed {
 
 	public void setStatus(String status) {
 		this.status = status;
+	}
+
+	public  String getB_id() {
+		return b_id;
+	}
+
+	public void setB_id(String b_id) {
+		this.b_id = b_id;
 	}
 	
 }

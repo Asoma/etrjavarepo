@@ -21,7 +21,7 @@ public class UpdateUserInfo extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-RequestDispatcher dispatcher=request.getRequestDispatcher("doctor.html");
+RequestDispatcher dispatcher=request.getRequestDispatcher("doctor.jsp");
 		
 		String u_id=request.getParameter("u_id");
 		String u_name=request.getParameter("h1_name");

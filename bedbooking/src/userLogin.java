@@ -30,9 +30,9 @@ public class userLogin extends HttpServlet {
 	    	  session = request.getSession(true); // reuse existing
              // session if exist
              // or create one
-session.setAttribute("user", un);
-//session.setAttribute("user", un);
-//session.setMaxInactiveInterval(30); // 30 seconds
+	    	  	session.setAttribute("user", un);
+ 
+	    	  	//session.setMaxInactiveInterval(30); // 30 seconds
 	         rd=request.getRequestDispatcher("user.jsp");  
 	        rd.forward(request,response);  
 	    }  

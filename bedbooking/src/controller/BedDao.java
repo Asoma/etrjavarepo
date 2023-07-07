@@ -47,7 +47,7 @@ public class BedDao {
 	Connection con=BedDao.getConnection();
 	System.out.println("Conection Established Successfully");
 	
-	PreparedStatement ps=con.prepareStatement("delete from reg_beds  where bedNo=?");
+	PreparedStatement ps=con.prepareStatement("delete from reg_beds  where id=?");
 	
 	ps.setInt(1,bed_no);
 	
@@ -67,7 +67,10 @@ public class BedDao {
 	        PreparedStatement ps=con.prepareStatement("select * from reg_beds limit "+(start-1)+","+total);  
 	        ResultSet rs=ps.executeQuery();  
 	        while(rs.next()){  
-	            Bed e3=new Bed();     
+	            Bed e3=new Bed();  
+	           int id = rs.getInt(1);
+	           String id1 = Integer.toString(id);
+	           e3.setB_id(id1); 
 	            e3.setRoom_no(rs.getString(2)); 
 	            e3.setBed_no(rs.getString(3)); 
 	            e3.setPrice(rs.getString(4));
@@ -86,7 +89,10 @@ public class BedDao {
 	        PreparedStatement ps=con.prepareStatement("select * from reg_beds where status1='available' limit "+(start-1)+","+total);  
 	        ResultSet rs=ps.executeQuery();  
 	        while(rs.next()){  
-	            Bed e3=new Bed();     
+	        	Bed e3=new Bed();
+	        	  int id = rs.getInt(1);
+		           String id1 = Integer.toString(id);
+		           e3.setB_id(id1); 
 	            e3.setRoom_no(rs.getString(2)); 
 	            e3.setBed_no(rs.getString(3)); 
 	            e3.setPrice(rs.getString(4));

@@ -13,7 +13,7 @@ import model.Doctor;
 public class Doctordao {
 	static Connection getConnection() throws ClassNotFoundException, SQLException
 	{
-//	Class.forName("com.mysql.jdbc.Driver");
+ 
 	Class.forName("com.mysql.jdbc.Driver");
 	System.out.println("Driver Registerd");
 	Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/hospitaldb","root","");
@@ -134,6 +134,7 @@ public class Doctordao {
 	            e1.setDpass(rs.getString(8));
 	            list.add(e1);  
 	        }  
+	      
 	        con.close();  
 	    }catch(Exception e){System.out.println(e);}  
 	    return list;  

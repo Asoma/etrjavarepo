@@ -29,7 +29,7 @@ public class AddBed extends HttpServlet {
 		String status=request.getParameter("status");
 		
 		
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		
 		
 			Bed b1=new Bed(room_no, bed_no, price,status);
@@ -45,6 +45,6 @@ public class AddBed extends HttpServlet {
 			} catch (ClassNotFoundException | SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}	}
+			}	}  
 
 }

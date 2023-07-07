@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import model.User;
 import controller.UserDao;
@@ -24,9 +25,12 @@ public class ShowUserDetails extends HttpServlet {
 			HttpServletResponse response) throws ServletException, IOException {
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-
+		 HttpSession session ;
 		// List<User> list=UserDao.getUserRecords(pageid,total);
-		String u_id = "1";
+		  
+	   
+		
+	//	String u_id = "2";
 		User e2 = null;
 		out.print("<html>");
 		out.print("<head>");
@@ -40,7 +44,14 @@ public class ShowUserDetails extends HttpServlet {
 
 		// u_id=request.getParameter(u_id);
 		try {
-			e2 = UserDao.UserSearch(Integer.parseInt(u_id));
+			//  session = request.getSession(true);
+			  session = request.getSession();	
+	        	String uname = (String) session.getAttribute("user");
+			   
+	            
+			//String uname = (String) session.getAttribute("user");
+			e2 = UserDao.getUserInfo(uname);
+			
 		} catch (NumberFormatException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

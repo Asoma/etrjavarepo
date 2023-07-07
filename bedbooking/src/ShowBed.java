@@ -39,9 +39,9 @@ out.print("</head><body>");
 out.print("<div class='container'>");
 out.print("<h1>Beds Details</h1>");  
 	  out.print("<table border='1' cellpadding='4' width='60%' class='table table-hover'>");  
-	out.print("<tr><th>Room No.</th><th>Bed no.</th><th>price</th><th>Status</th></tr>");  
+	out.print("<tr><th>Bed Id.</th><th>Room No.</th><th>Bed no.</th><th>price</th><th>Status</th></tr>");  
 	  for(Bed e3:list){  
-	          out.print("<tr><td>"+e3.getRoom_no()+"</td><td>"+e3.getBed_no()+"</td><td>"+e3.getPrice());
+	          out.print("<tr><td>"+e3.getB_id()+"</td><td>"+e3.getRoom_no()+"</td><td>"+e3.getBed_no()+"</td><td>"+e3.getPrice());
 	        		  if(e3.getStatus().equals("booked")){
 	        		 
 	        			   out.print( "</td><td class='btn-danger'>"+e3.getStatus()+"</td></tr>");  
