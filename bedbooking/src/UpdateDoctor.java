@@ -22,7 +22,7 @@ public class UpdateDoctor extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		
 		String d_id=request.getParameter("d_id");
 		String d_name=request.getParameter("d_name");

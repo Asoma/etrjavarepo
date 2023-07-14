@@ -29,7 +29,7 @@ public class AddDoctor extends HttpServlet {
 		String d_qual=request.getParameter("d_qual"); 
 		String dname=request.getParameter("docname");
 		String dpass=request.getParameter("docpass");
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		
 		
 			Doctor d=new Doctor(d_name, d_email, d_mob, d_address, d_qual, dname, dpass);

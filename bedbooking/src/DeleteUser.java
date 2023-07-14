@@ -20,7 +20,7 @@ import controller.UserDao;
 public class DeleteUser extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		int u_id = Integer.parseInt(request.getParameter("u_id"));
 		try {
 			int f2= UserDao.deleteuser(u_id);

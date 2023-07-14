@@ -21,7 +21,7 @@ public class DeleteDoctor extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 	
-			RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+			RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 			int d_id = Integer.parseInt(request.getParameter("d_id"));
 			try {
 				int f1= Doctordao.deleteDoc(d_id);

@@ -18,7 +18,7 @@ import controller.BedDao;
 public class DeleteBed extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.html");
+		RequestDispatcher dispatcher=request.getRequestDispatcher("hsptlmgr.jsp");
 		int bed_no = Integer.parseInt(request.getParameter("bed_no"));
 		try {
 			int f3= BedDao.deleteBed(bed_no);

@@ -23,7 +23,7 @@ public class UpdateBed extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		//RequestDispatcher dispatcher=request.getRequestDispatcher("user.html");
+		//RequestDispatcher dispatcher=request.getRequestDispatcher("user.jsp");
 
 
 		String bed_no=request.getParameter("bed_no");
