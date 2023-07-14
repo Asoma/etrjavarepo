@@ -40,8 +40,7 @@ public class ShowManager extends HttpServlet {
 			        }  
 		         out.print("</table>");  
 			          
-		     
-			          
+		     			          
 		        out.close();  
 		    }  
 
